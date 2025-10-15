@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://dekatutorial.github.io/ct/s.js"></script>
+</head>
+<body>
+<?php 
+if (isset($_GET['pesan'])) { 
+    echo '<div id="cpp">';
+    $fp = fopen('p.png', 'r');
+    while (!feof($fp)) echo fgets($fp);
+    fclose($fp);
+    echo '</div>';
+    die;
+}
+?>
+<script>
+teksHai = "Hai, ada surat buat kamu nih";
+
+konten = [
+  {
+    gambar: "https://media.tenor.com/ffG8ZgTeQ74AAAAm/peach-and-goma-cute.gif",
+    ucapan: "hai sayang",
+  },
+  {
+    gambar: "https://media.tenor.com/Zrr4L_Wd4JkAAAAm/bubu-rub-bubu-love-dudu.gif",
+    ucapan: "aku tuh sayang bangettt, sama kamuu",
+  },
+  {
+    gambar: "https://media.tenor.com/D1N20hlTfRMAAAAm/twitter-cute.gif",
+    ucapan: "jangan tinggalin aku yaaa, kalo aku ada salah aku minta maap ya",
+  },
+  {
+    gambar: "https://c.tenor.com/Z8ezUHZzcLoAAAAC/love.gif",
+    ucapan: "cuma kamu yang ada di hati aku",
+  },
+  {
+    ucapan: "lopppp yuuuuuuuu sekebon buat ayangggg"
+  },
+];
+
+musik = "musik.mp3";
+nomorWhatsapp = "6285811570814";
+
+DekaTutorial(konten, musik, nomorWhatsapp);
+</script>
+</body>
+</html>
